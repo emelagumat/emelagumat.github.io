@@ -1,0 +1,18 @@
+[
+  {
+    "name": "JaiRuta",
+    "description": "Multi-Stop Route App for Transport Workers, published on App Store. Developed with SwiftUI and MVVM. Designed for delivery and messaging services, optimizing routes and improving efficiency.",
+    "techStack": ["SwiftUI", "MVVM"],
+    "features": ["Route optimization", "multi-stop planning", "App Store published"],
+    "image": "../../images/projects/jairuta/1.png",
+    "link": "https://apps.apple.com/app/jairuta"
+  },
+  {
+    "name": "PocketAccountant",
+    "description": "Personal Finance Management App built with SwiftUI, Swift-Data, and CloudKit for cross-device synchronization. Implemented MVVM architecture, widgets, Siri integration, and shortcuts for seamless user experience.",
+    "techStack": ["SwiftUI", "Swift-Data", "CloudKit", "MVVM"],
+    "features": ["Widgets", "Siri integration", "shortcuts", "cross-device sync"],
+    "image": "../../images/project3.png",
+    "link": "https://github.com/emelagumat/pocket-accountant"
+  }
+]
