@@ -1,8 +1,64 @@
 // Basic script for Emelagudev site
 console.log('Script loaded for Emelagudev site');
 
+function loadNavigation() {
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const header = doc.querySelector('header');
+            if (header) {
+                // Adjust href based on current path
+                const isInPages = window.location.pathname.includes('/pages/');
+                const links = header.querySelectorAll('a');
+                links.forEach(link => {
+                    let href = link.getAttribute('href');
+                    if (isInPages && !href.startsWith('http')) {
+                        if (href === 'index.html') {
+                            link.setAttribute('href', '../index.html');
+                        } else if (href.startsWith('pages/')) {
+                            link.setAttribute('href', '../' + href);
+                        }
+                    }
+                });
+                // Insert header at the beginning of body
+                document.body.insertBefore(header, document.body.firstChild);
+                // Set active link based on current URL
+                setActiveLink();
+            }
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+}
+
+// Function to set active link based on current URL
+function setActiveLink() {
+    const navLinks = document.querySelectorAll('nav a');
+    const currentPath = window.location.pathname;
+    let found = false;
+
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href, window.location.origin).pathname;
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+            found = true;
+        } else {
+            link.classList.remove('active');
+            link.removeAttribute('aria-current');
+        }
+        if (!found && navLinks.length > 0) {
+        navLinks[0].classList.add('active');
+        navLinks[0].setAttribute('aria-current', 'page');
+        }
+    });
+}
+
 // Smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', function() {
+    // Load navigation first
+    loadNavigation();
+
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -49,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${project.description}</p>
                         <p><strong>Tech Stack:</strong> ${techStack}</p>
                         <p><strong>Features:</strong> ${features}</p>
-                        <p><a href="${project.link}" target="_blank">View Project</a></p>
+                        <p><a href="${project.link.url}" target="_blank">${project.link.label}</a></p>
                     </div>
                 </div>
             </article>
@@ -66,7 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(projects => {
-                projects.forEach(project => {
+                projects
+                .filter(p => p.show !== false)
+                .forEach(project => {
                     const html = generateProjectHTML(project);
                     container.innerHTML += html;
                 });

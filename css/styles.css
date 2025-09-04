@@ -32,6 +32,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+.brand h1, .brand h3 {
+    margin: 0;
+}
+
+.brand h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
 
 nav h1 {
     font-size: 1.5rem;
