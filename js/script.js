@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const heroPs = document.querySelectorAll('#hero p');
             if (heroH1) heroH1.textContent = data.name;
             if (heroPs.length >= 1) heroPs[0].textContent = data.description;
-            if (heroPs.length >= 2) heroPs[1].textContent = data.experience;
 
             // Update skills section
             const skillsCard = document.querySelector('#skills .card');
