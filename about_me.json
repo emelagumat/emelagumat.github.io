@@ -1,0 +1,31 @@
+{
+  "name": "Manu Laguna",
+  "description": "I'm Manu Laguna, a seasoned iOS developer with over 6 years of experience specializing in Swift, UIKit, and SwiftUI. I create innovative, user-centric applications that prioritize performance, accessibility, and scalability. Explore my portfolio to discover projects that showcase my expertise in mobile development, API integration, and cross-platform solutions. With a passion for clean code and efficient problem-solving, I deliver high-quality software that meets business needs and enhances user experiences.",
+  "experience": "6+ years",
+  "techStack": [
+    {
+      "category": "Languages",
+      "technologies": ["Swift", "Objective-C"]
+    },
+    {
+      "category": "Frameworks",
+      "technologies": ["SwiftUI", "UIKit", "Combine", "RxSwift", "Swift Concurrency", "AVFoundation", "Core Data", "Swift Data", "CloudKit", "Swift Vapor"]
+    },
+    {
+      "category": "Architecture & Patterns",
+      "technologies": ["MVVM", "VIPER", "TCA", "Adapter", "Observer", "Factory", "Strategy", "Dependency Injection"]
+    },
+    {
+      "category": "Testing",
+      "technologies": ["XCTest", "Quick/Nimble", "Swift Testing"]
+    },
+    {
+      "category": "Networking & Tools",
+      "technologies": ["Moya", "Alamofire", "CocoaPods", "SPM", "GitHub"]
+    },
+    {
+      "category": "Services",
+      "technologies": ["Firebase", "Google Maps", "Google AdMob", "MapKit", "Mapbox", "ArcGIS", "WebSockets"]
+    }
+  ]
+}

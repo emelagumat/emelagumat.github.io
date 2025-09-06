@@ -47,11 +47,12 @@ function setActiveLink() {
             link.classList.remove('active');
             link.removeAttribute('aria-current');
         }
-        if (!found && navLinks.length > 0) {
+    });
+
+    if (!found && navLinks.length > 0) {
         navLinks[0].classList.add('active');
         navLinks[0].setAttribute('aria-current', 'page');
-        }
-    });
+    }
 }
 
 // Smooth scrolling for anchor links
@@ -94,18 +95,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to generate HTML for a project
     function generateProjectHTML(project) {
-        const techStack = project.techStack ? project.techStack.join(', ') : '';
-        const features = project.features ? project.features.join(', ') : '';
+        let techStackHTML = '';
+        if (project.techStack) {
+            project.techStack.forEach(categoryObj => {
+                const category = Object.keys(categoryObj)[0];
+                const techs = categoryObj[category];
+                techStackHTML += `<div class="tech-category"><h4>${category}</h4><div class="tech-items">${techs.map(tech => `<span class="chip">${tech}</span>`).join(' ')}</div></div>`;
+            });
+        }
+        let featuresHTML = '';
+        if (project.features) {
+            featuresHTML = '<div class="features-list">';
+            project.features.forEach(feature => {
+                featuresHTML += `<h4>${feature.name}:</h4> ${feature.description}<br>`;
+            });
+            featuresHTML += '</div>';
+        }
+        const images = project.images ? project.images.slice(0, 3) : [];
+        let carouselHTML = '';
+
+        if (images.length <= 3) {
+            carouselHTML = `<div class="carousel-flex">${images.map((img, index) => `<img src="${img}" alt="Screenshot ${index + 1} of ${project.name}" class="carousel-image">`).join('')}</div>`;
+        } else {
+            carouselHTML = `
+                <div class="carousel">
+                    <div class="carousel-images">
+                        ${images.map((img, index) => `<img src="${img}" alt="Screenshot ${index + 1} of ${project.name}" class="carousel-image">`).join('')}
+                    </div>
+                    <button class="carousel-prev">‹</button>
+                    <button class="carousel-next">›</button>
+                </div>
+            `;
+        }
+
         return `
             <article class="card project">
                 <h2>${project.name}</h2>
+                <p>${project.description}</p>
+                ${carouselHTML}
                 <div class="project-content" style="display: flex; gap: 20px; align-items: flex-start;">
-                    <img src="${project.image}" alt="Screenshot of ${project.name}" style="width:200px; height:auto;">
                     <div>
-                        <p>${project.description}</p>
-                        <p><strong>Tech Stack:</strong> ${techStack}</p>
-                        <p><strong>Features:</strong> ${features}</p>
-                        <p><a href="${project.link.url}" target="_blank">${project.link.label}</a></p>
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack">${techStackHTML}</div>
+                        <h3>Features</h3>
+                        ${featuresHTML}
+                        <p><a href="${project.link.url}" target="_blank" class="btn">${project.link.label}</a></p>
                     </div>
                 </div>
             </article>
@@ -114,7 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load projects from JSON
     const container = document.getElementById('projects-container');
     if (container) {
-        fetch('../projects.json')
+        const isInPages = window.location.pathname.includes('/pages/');
+        const projectsPath = isInPages ? '../projects.json' : 'projects.json';
+        fetch(projectsPath)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -128,10 +164,64 @@ document.addEventListener('DOMContentLoaded', function() {
                     const html = generateProjectHTML(project);
                     container.innerHTML += html;
                 });
+
+                // Initialize carousels
+                function initCarousel(carousel) {
+                    const images = carousel.querySelectorAll('.carousel-image');
+                    let currentIndex = 0;
+                    const prevBtn = carousel.querySelector('.carousel-prev');
+                    const nextBtn = carousel.querySelector('.carousel-next');
+
+                    function showImage(index) {
+                        images.forEach((img, i) => {
+                            img.style.display = i === index ? 'block' : 'none';
+                        });
+                    }
+
+                    // Initialize first image
+                    showImage(0);
+
+                    prevBtn.addEventListener('click', () => {
+                        currentIndex = (currentIndex - 1 + images.length) % images.length;
+                        showImage(currentIndex);
+                    });
+
+                    nextBtn.addEventListener('click', () => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        showImage(currentIndex);
+                    });
+                }
+
+                document.querySelectorAll('.carousel').forEach(initCarousel);
             })
             .catch(error => {
                 console.error('Error loading projects:', error);
                 container.innerHTML = '<p>Error loading projects. Please try again later.</p>';
             });
     }
+
+    // Load about_me.json and update hero and skills sections
+    fetch('about_me.json')
+        .then(response => response.json())
+        .then(data => {
+            // Update hero section
+            const heroH1 = document.querySelector('#hero h1');
+            const heroPs = document.querySelectorAll('#hero p');
+            if (heroH1) heroH1.textContent = data.name;
+            if (heroPs.length >= 1) heroPs[0].textContent = data.description;
+            if (heroPs.length >= 2) heroPs[1].textContent = data.experience;
+
+            // Update skills section
+            const skillsCard = document.querySelector('#skills .card');
+            if (skillsCard && data.techStack) {
+                let skillsHTML = '';
+                data.techStack.forEach(categoryObj => {
+                    const category = categoryObj.category;
+                    const techs = categoryObj.technologies;
+                    skillsHTML += `<div class="tech-category"><h4>${category}</h4><div class="tech-items">${techs.map(tech => `<span class="chip">${tech}</span>`).join(' ')}</div></div>`;
+                });
+                skillsCard.innerHTML = `<div class="tech-stack">${skillsHTML}</div>`;
+            }
+        })
+        .catch(error => console.error('Error loading about_me.json:', error));
 });
