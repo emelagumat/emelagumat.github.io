@@ -58,7 +58,7 @@ nav ul li {
 nav ul li a {
     color: #ecf0f1;
     text-decoration: none;
-    padding: 1rem 1.5rem;
+    padding: 0rem 0.5rem;
     border-radius: 20px;
     transition: all 0.3s;
     min-height: 44px;
@@ -126,28 +126,47 @@ p {
 }
 
 /* Buttons */
-button, .btn {
+button, .btn2 {
     background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: #fff;
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.3);
-    min-height: 44px;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    min-height: 40px;
     display: inline-flex;
     align-items: center;
 }
 
+.btn {
+    background: none;
+    color: #3498db;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0;
+    min-height: auto;
+}
+
 button:hover, .btn:hover,
 button:focus, .btn:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(52, 152, 219, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(52, 152, 219, 0.6);
     outline: 2px solid #ecf0f1;
     outline-offset: 2px;
+}
+
+.btn:hover,
+.btn:focus {
+    text-decoration: underline;
+    color: #2980b9;
+    transform: none;
+    box-shadow: none;
+    outline: none;
 }
 
 /* Links */

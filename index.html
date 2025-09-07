@@ -47,6 +47,7 @@
         fetch('projects.json')
             .then(response => response.json())
             .then(data => {
+                const isInPages = window.location.pathname.includes('/pages/');
                 const featuredProjects = data.filter(project => project.isFeatured);
                 const container = document.getElementById('featured-projects');
                 featuredProjects.forEach(project => {
@@ -70,6 +71,7 @@
                             <h2>${project.name}</h2>
                             <p>${project.description}</p>
                             ${carouselHTML}
+                            ${!isInPages ? '<p><a href="pages/projects.html" class="btn">more</a></p>' : ''}
                             <p><a href="${project.link.url}" target="_blank" class="btn">${project.link.label}</a></p>
                         </div>
                     `;

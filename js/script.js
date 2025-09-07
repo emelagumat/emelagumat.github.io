@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to generate HTML for a project
     function generateProjectHTML(project) {
+        const isInPages = window.location.pathname.includes('/pages/');
         let techStackHTML = '';
         if (project.techStack) {
             project.techStack.forEach(categoryObj => {
@@ -139,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="tech-stack">${techStackHTML}</div>
                         <h3>Features</h3>
                         ${featuresHTML}
+                        ${!isInPages ? '<p><a href="pages/projects.html" class="btn">more</a></p>' : ''}
                         <p><a href="${project.link.url}" target="_blank" class="btn">${project.link.label}</a></p>
                     </div>
                 </div>
