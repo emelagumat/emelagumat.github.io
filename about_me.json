@@ -8,8 +8,24 @@
       "technologies": ["Swift", "Objective-C"]
     },
     {
-      "category": "Frameworks",
-      "technologies": ["SwiftUI", "UIKit", "Combine", "RxSwift", "AVFoundation", "Core Location", "Core Data", "Swift Data", "CloudKit", "Swift Vapor","Swift Concurrency"]
+      "category": "UI & UX Frameworks",
+      "technologies": ["SwiftUI", "UIKit"]
+    },
+    {
+      "category": "Reactive & Async",
+      "technologies": ["Combine", "RxSwift", "Swift Concurrency"]
+    },
+    {
+      "category": "Multimedia & Device",
+      "technologies": ["AVFoundation", "Core Location", "Camera & Photos APIs"]
+    },
+    {
+      "category": "Persistence & Cloud",
+      "technologies": ["Core Data", "Swift Data", "CloudKit"]
+    },
+    {
+      "category": "Backend & Networking",
+      "technologies": ["Swift Vapor", "Moya", "Alamofire"]
     },
     {
       "category": "Architecture & Patterns",
@@ -20,12 +36,16 @@
       "technologies": ["XCTest", "Quick/Nimble", "Swift Testing"]
     },
     {
-      "category": "Networking & Tools",
-      "technologies": ["Moya", "Alamofire", "CocoaPods", "SPM", "GitHub", "Kilo-Code"]
+      "category": "Navigation & Deep Linking",
+      "technologies": ["Deep Linking", "Universal Links", "Custom URL Schemes"]
     },
     {
-      "category": "Services",
+      "category": "Services & SDKs",
       "technologies": ["Firebase", "Google AdMob", "Google Maps", "MapKit", "Mapbox"]
+    },
+    {
+      "category": "Tools & Dev Productivity",
+      "technologies": ["CocoaPods", "SPM", "GitHub", "AI Assisted Development"]
     }
   ]
 }
