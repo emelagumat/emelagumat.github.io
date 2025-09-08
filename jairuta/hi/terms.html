@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaiRoute - उपयोग की शर्तें</title>
+    <meta name="description" content="JaiRoute उपयोग की शर्तें - हमारे रूट ऑप्टिमाइज़ेशन ऐप का उपयोग करने की शर्तों के बारे में जानें।">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        :root {
+            --primary-green: #34a853;
+            --secondary-green: #137333;
+            --light-green: #e8f5e8;
+            --dark-bg: #1a1a1a;
+            --dark-card: #2d2d2d;
+            --dark-text: #e0e0e0;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-green);
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--light-green);
+            color: var(--secondary-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a.current {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        h3 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+
+            .container {
+                background: var(--dark-card);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .highlight-box {
+                background: rgba(52, 168, 83, 0.2);
+                border-left-color: var(--primary-green);
+            }
+
+            .warning-box {
+                background: rgba(255, 193, 7, 0.2);
+                border-left-color: #ffc107;
+            }
+
+            .nav-links a {
+                background: rgba(52, 168, 83, 0.2);
+                color: var(--primary-green);
+            }
+
+            .last-updated {
+                border-top-color: #444;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JaiRoute</h1>
+            <p class="subtitle">उपयोग की शर्तें</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="privacy.html">गोपनीयता नीति</a>
+            <a href="terms.html" class="current">उपयोग की शर्तें</a>
+        </nav>
+
+        <section>
+            <h2>शर्तों की स्वीकृति</h2>
+            <p>JaiRoute मोबाइल एप्लिकेशन ("ऐप") को डाउनलोड, इंस्टॉल या उपयोग करके, आप इन उपयोग की शर्तों ("शर्तें") से बाध्य होने के लिए सहमत हैं। यदि आप इन शर्तों से सहमत नहीं हैं, तो कृपया ऐप का उपयोग न करें।</p>
+            
+            <div class="highlight-box">
+                <strong>महत्वपूर्ण:</strong> ये शर्तें आपके और JaiRoute के डेवलपर Emelagudev के बीच एक कानूनी रूप से बाध्यकारी समझौता बनाती हैं।
+            </div>
+        </section>
+
+        <section>
+            <h2>सेवा विवरण</h2>
+            <p>JaiRoute एक मुफ्त मोबाइल एप्लिकेशन है जो उपयोगकर्ताओं को कई स्टॉप के साथ रूट को अनुकूलित करने में मदद करने के लिए डिज़ाइन किया गया है। ऐप प्रदान करता है:</p>
+            <ul>
+                <li>रूट अनुकूलन और योजना उपकरण</li>
+                <li>मल्टी-स्टॉप रूट गणना</li>
+                <li>नेवीगेशन सहायता और दिशा-निर्देश</li>
+                <li>समय और दूरी का अनुमान</li>
+                <li>मैप एकीकरण और विज़ुअलाइज़ेशन</li>
+            </ul>
+            
+            <p>ऐप मुफ्त में प्रदान किया जाता है और Google AdMob के माध्यम से विज्ञापन द्वारा समर्थित है।</p>
+        </section>
+
+        <section>
+            <h2>उपयोगकर्ता जिम्मेदारियां</h2>
+            
+            <h3>स्वीकार्य उपयोग</h3>
+            <p>आप JaiRoute का उपयोग केवल वैध उद्देश्यों के लिए और इन शर्तों के अनुसार करने के लिए सहमत हैं। आप नहीं करेंगे:</p>
+            <ul>
+                <li>ऐप का उपयोग किसी भी अवैध या अनधिकृत उद्देश्य के लिए करना</li>
+                <li>ऐप को रिवर्स इंजीनियर, डीकंपाइल या डिसअसेंबल करने का प्रयास करना</li>
+                <li>ऐप की कार्यक्षमता में हस्तक्षेप या बाधा डालना</li>
+                <li>ऐप तक पहुंचने के लिए स्वचालित सिस्टम का उपयोग करना</li>
+                <li>ऐप का उपयोग करते समय किसी भी लागू कानून या नियम का उल्लंघन करना</li>
+            </ul>
+
+            <h3>सुरक्षित उपयोग</h3>
+            <div class="warning-box">
+                <strong>सुरक्षा चेतावनी:</strong> नेवीगेशन के लिए JaiRoute का उपयोग करते समय हमेशा सुरक्षा को प्राथमिकता दें। ड्राइविंग करते समय ऐप का उपयोग न करें। ऐप के साथ इंटरैक्ट करने से पहले सुरक्षित रूप से रुकें, या किसी यात्री से इसे आपके लिए संचालित करने को कहें।
+            </div>
+            
+            <p>आप स्वीकार करते हैं कि:</p>
+            <ul>
+                <li>रूट सुझाव केवल मार्गदर्शन के लिए हैं और हमेशा इष्टतम नहीं हो सकते</li>
+                <li>आप रूट की सुरक्षा और वैधता की जांच के लिए जिम्मेदार हैं</li>
+                <li>ट्रैफिक की स्थिति, सड़क बंद होना और अन्य कारक रूट को प्रभावित कर सकते हैं</li>
+                <li>आपको हमेशा स्थानीय ट्रैफिक कानूनों और नियमों का पालन करना चाहिए</li>
+            </ul>
+        </section>
+
+        <div class="contact-info">
+            <h3>संपर्क जानकारी</h3>
+            <p>यदि आपके पास इन उपयोग की शर्तों के बारे में कोई प्रश्न है, तो कृपया हमसे संपर्क करें:</p>
+            <p><strong>डेवलपर:</strong> <a href="mailto:emelagudev@gmail.com">emelagudev@gmail.com</a></p>
+            <p>हम आपकी पूछताछ का जल्द से जल्द जवाब देंगे।</p>
+        </div>
+
+        <div class="last-updated">
+            <p>अंतिम अपडेट: जनवरी 2025</p>
+        </div>
+    </div>
+</body>
+</html>

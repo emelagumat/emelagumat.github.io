@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaiRuta - Pribatutasun Politika</title>
+    <meta name="description" content="JaiRuta Pribatutasun Politika - Jakin ezazu nola babesten dugun zure pribatutasuna eta nola kudeatzen ditugun zure datuak gure ibilbide optimizazio aplikazioan.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        :root {
+            --primary-green: #34a853;
+            --secondary-green: #137333;
+            --light-green: #e8f5e8;
+            --dark-bg: #1a1a1a;
+            --dark-card: #2d2d2d;
+            --dark-text: #e0e0e0;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-green);
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--light-green);
+            color: var(--secondary-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a.current {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        h3 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+
+            .container {
+                background: var(--dark-card);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .highlight-box {
+                background: rgba(52, 168, 83, 0.2);
+                border-left-color: var(--primary-green);
+            }
+
+            .nav-links a {
+                background: rgba(52, 168, 83, 0.2);
+                color: var(--primary-green);
+            }
+
+            .last-updated {
+                border-top-color: #444;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JaiRuta</h1>
+            <p class="subtitle">Pribatutasun Politika</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="privacy.html" class="current">Pribatutasun Politika</a>
+            <a href="terms.html">Erabilera Baldintzak</a>
+        </nav>
+
+        <section>
+            <h2>Sarrera</h2>
+            <p>Ongi etorri JaiRuta-ra, Emelagudev-ek garatutako ibilbide optimizazio aplikazio batera. Zure pribatutasuna babesteko eta zure informazioa nola kudeatzen dugun gardentasuna bermatzeko konprometituta gaude. Pribatutasun Politika honek gure mugikorrerako aplikazioa erabiltzerakoan datuen bilketa, erabilera eta babesari buruzko gure praktikak azaltzen ditu.</p>
+            
+            <div class="highlight-box">
+                <strong>Puntu Nagusia:</strong> JaiRuta pribatutasuna kontuan hartuta diseinatu da. Ez dugu informazio pertsonal identifikagarririk biltzen, eta gure aplikazioak erabiltzaile erregistrorik edo saio hasierarik gabe funtzionatzen du.
+            </div>
+        </section>
+
+        <section>
+            <h2>Biltzen dugun Informazioa</h2>
+            
+            <h3>EZ dugun biltzen Informazioa</h3>
+            <ul>
+                <li>Identifikazio pertsonal informazioa (izena, emaila, telefono zenbakia)</li>
+                <li>Erabiltzaile kontuak edo profilak</li>
+                <li>Kontaktu zerrendak edo kontaktu pertsonalak</li>
+                <li>Argazkiak, bideoak edo beste multimedia fitxategiak</li>
+            </ul>
+
+            <h3>Biltzen dugun Informazioa</h3>
+            <ul>
+                <li><strong>Erabilera Analitika Anonimoak:</strong> Firebase Analytics bidez, aplikazioarekin nola elkarreragiten duzun buruzko datu anonimoak biltzen ditugu (bisitatutako pantailak, erabilitako funtzioak, aplikazio erroreak)</li>
+                <li><strong>Gailuaren Informazioa:</strong> Gailuaren oinarrizko informazioa hala nola gailu mota, sistema eragilearen bertsioa eta aplikazioaren bertsioa bateragarritasun eta errendimendu optimizaziorako</li>
+                <li><strong>Ibilbide Optimizazio Datuak:</strong> Erabiltzaile eta/edo geldialdiaren koordenatuak bil ditzakegu ibilbide optimizazio algoritmoak hobetzeko eta ibilbide iradokizun hobeak emateko</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Nola erabiltzen dugu zure Informazioa</h2>
+            <p>Biltzen ditugun datu anonimo mugatuak soilik erabiltzen dira:</p>
+            <ul>
+                <li>Aplikazioaren errendimendua eta erabiltzaile esperientzia hobetzeko</li>
+                <li>Erroreak edo arazo teknikoak identifikatu eta konpontzeko</li>
+                <li>Zein funtzio diren baliotsuenenak erabiltzaileentzat ulertzeko</li>
+                <li>Aplikazioaren etorkizuneko garapenari buruzko erabaki informatuak hartzeko</li>
+            </ul>
+            
+            <p>Ez dugu zure informazioa marketin, publizitate segmentaziorako edo aplikazioaren hobekuntzatik haratago beste komertzial xedetarako erabiltzen.</p>
+        </section>
+
+        <section>
+            <h2>Hirugarrenen Zerbitzuak</h2>
+            
+            <h3>Firebase Analytics (Google)</h3>
+            <p>Google Firebase Analytics erabiltzen dugu erabilera estatistika anonimoak biltzeko. Zerbitzu honek aplikazioaren errendimendua eta erabiltzaileen portaera ereduak ulertzeko laguntzen digu erabiltzaile indibidualak identifikatu gabe.</p>
+            
+            <h3>Google AdMob</h3>
+            <p>JaiRuta-k Google AdMob bidez iragarkiak erakusten ditu aplikazioa erabiltzaile guztientzat doan mantentzeko. AdMob-ek informazio jakin bat bil dezake iragarkien zerbitzurako:</p>
+            <ul>
+                <li>Gailuaren publizitate IDa (zure gailuaren ezarpenetan berrezar dezakezu)</li>
+                <li>Kokapen informazio orokorra (herrialde/eskualde mailan soilik)</li>
+                <li>Aplikazio erabilera ereduak iragarkien garrantzirakotasunerako</li>
+            </ul>
+            <p>Publizitate pertsonalizatua ez jasotzea aukera dezakezu zure gailuaren pribatutasun ezarpenen bidez.</p>
+
+            <h3>Mapa Zerbitzuak</h3>
+            <p>Ibilbide kalkuluek hirugarrenen mapa eta ibilbide zerbitzuak erabil ditzakete. Zerbitzu hauek ibilbide eskaerak aldi baterako prozesatzen dituzte eta ez dute zure ibilbide informazio espezifikorik gordetzen.</p>
+        </section>
+
+        <section>
+            <h2>Datuen Segurtasuna</h2>
+            <p>Biltzen ditugun datu mugatuak babesteko segurtasun neurri egokiak ezartzen ditugu:</p>
+            <ul>
+                <li>Datu transmisio guztiak industriako estandar protokoloak erabiliz zifratuta daude</li>
+                <li>Analitika datu anonimoak Google-ren Firebase zerbitzarietan modu seguruan gordetzen dira</li>
+                <li>Ez dugu zu identifika dezakeen informazio pertsonal sentikorrik gordetzen</li>
+                <li>Segurtasun ebaluazio erregularrek gure praktikak eguneratuta mantentzen direla ziurtatzen dute</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Zure Eskubideak eta Aukerak</h2>
+            <ul>
+                <li><strong>Analitika Kanpo-uztea:</strong> Analitika jarraipena desgaitu dezakezu zure gailuaren pribatutasun ezarpenen bidez</li>
+                <li><strong>Iragarkien Pertsonalizazioa:</strong> Publizitate pertsonalizatua ez jasotzea aukera dezakezu zure gailuaren publizitate ezarpenen bidez</li>
+                <li><strong>Aplikazio Baimenak:</strong> Aplikazioaren baimenak edozein unetan berrikusi eta aldatu ditzakezu zure gailuaren ezarpenetan</li>
+                <li><strong>Datuen Ezabaketa:</strong> Datu pertsonalak biltzen ez ditugunez, ez dago datu pertsonalrik ezabatzeko. Analitika anonimoak ezin dira erabiltzaile indibidualetara atzera jarraitu</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Haurren Pribatutasuna</h2>
+            <p>JaiRuta adin guztietako erabiltzaileentzat egokia da. Ez dugu jakinez 13 urte azpiko haurren informazio pertsonalrik biltzen. Gure aplikazioak ez duenez erabiltzaileen informazio pertsonal identifikagarririk biltzen, haurren pribatutasun babes eskakizunak betetzen ditu.</p>
+        </section>
+
+        <section>
+            <h2>Nazioarteko Erabiltzaileak</h2>
+            <p>JaiRuta mundu osoan eskuragarri dago. Biltzen ditugun datu anonimoak gure zerbitzu hornitzaileak lan egiten duten hainbat herrialdeetan prozesa daitezke, Estatu Batuak barne. Datu prozesamendu guztiak pribatutasun lege eta araudia aplikagarriak betetzen dituela ziurtatzen dugu.</p>
+        </section>
+
+        <section>
+            <h2>Pribatutasun Politika honen Aldaketak</h2>
+            <p>Pribatutasun Politika hau noizbehinka eguneratu dezakegu gure praktiketan aldaketak islatzeko edo arrazoi legal eta arautzaileengatik. Aldaketa garrantzitsuak egiterakoan, erabiltzaileak aplikazioaren bidez jakinaraziko ditugu edo beheko "Azken Eguneraketa" data eguneratuko dugu. Politika hau aldizka berrikustea gomendatzen dizugu.</p>
+        </section>
+
+        <div class="contact-info">
+            <h3>Jarri Gurekin Harremanetan</h3>
+            <p>Pribatutasun Politika honi edo gure pribatutasun praktikeei buruzko galdera, kezkak edo eskaerak badituzu, mesedez jarri gurekin harremanetan:</p>
+            <p><strong>Garatzailea:</strong> <a href="mailto:emelagudev@gmail.com">emelagudev@gmail.com</a></p>
+            <p>Zure pribatutasun kezkak azkar eta garden modu batean helburu ditzateko konprometituta gaude.</p>
+        </div>
+
+        <div class="last-updated">
+            <p>Azken Eguneraketa: 2025eko Urtarrila</p>
+        </div>
+    </div>
+</body>
+</html>

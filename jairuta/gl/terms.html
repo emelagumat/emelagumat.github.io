@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaiRuta - Termos de Uso</title>
+    <meta name="description" content="Termos de Uso de JaiRuta - Descobre os termos e condicións para usar a nosa app de optimización de rutas.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        :root {
+            --primary-green: #34a853;
+            --secondary-green: #137333;
+            --light-green: #e8f5e8;
+            --dark-bg: #1a1a1a;
+            --dark-card: #2d2d2d;
+            --dark-text: #e0e0e0;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-green);
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--light-green);
+            color: var(--secondary-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a.current {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        h3 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+
+            .container {
+                background: var(--dark-card);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .highlight-box {
+                background: rgba(52, 168, 83, 0.2);
+                border-left-color: var(--primary-green);
+            }
+
+            .warning-box {
+                background: rgba(255, 193, 7, 0.2);
+                border-left-color: #ffc107;
+            }
+
+            .nav-links a {
+                background: rgba(52, 168, 83, 0.2);
+                color: var(--primary-green);
+            }
+
+            .last-updated {
+                border-top-color: #444;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JaiRuta</h1>
+            <p class="subtitle">Termos de Uso</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="privacy.html">Política de Privacidade</a>
+            <a href="terms.html" class="current">Termos de Uso</a>
+        </nav>
+
+        <section>
+            <h2>Aceptación dos Termos</h2>
+            <p>Ao descargar, instalar ou usar a aplicación móbil JaiRuta ("a App"), aceptas estar suxeito a estes Termos de Uso ("Termos"). Se non estás de acordo con estes Termos, por favor non uses a App.</p>
+            
+            <div class="highlight-box">
+                <strong>Importante:</strong> Estes Termos constitúen un acordo legalmente vinculante entre ti e Emelagudev, o desenvolvedor de JaiRuta.
+            </div>
+        </section>
+
+        <section>
+            <h2>Descrición do Servizo</h2>
+            <p>JaiRuta é unha aplicación móbil gratuíta deseñada para axudar aos usuarios a optimizar rutas con múltiples paradas. A App proporciona:</p>
+            <ul>
+                <li>Ferramentas de optimización e planificación de rutas</li>
+                <li>Cálculos de rutas con múltiples paradas</li>
+                <li>Asistencia de navegación e direccións</li>
+                <li>Estimacións de tempo e distancia</li>
+                <li>Integración e visualización de mapas</li>
+            </ul>
+            
+            <p>A App proporciónase de forma gratuíta e está respaldada por publicidade a través de Google AdMob.</p>
+        </section>
+
+        <section>
+            <h2>Responsabilidades do Usuario</h2>
+            
+            <h3>Uso Aceptable</h3>
+            <p>Aceptas usar JaiRuta só para propósitos legais e de acordo con estes Termos. Non debes:</p>
+            <ul>
+                <li>Usar a App para calquera propósito ilegal ou non autorizado</li>
+                <li>Intentar facer enxeñaría inversa, descompilar ou desensamblar a App</li>
+                <li>Interferir con ou interromper a funcionalidade da App</li>
+                <li>Usar sistemas automatizados para acceder á App</li>
+                <li>Violar calquera lei ou regulación aplicable mentres usas a App</li>
+            </ul>
+
+            <h3>Uso Seguro</h3>
+            <div class="warning-box">
+                <strong>Advertencia de Seguridade:</strong> Sempre prioriza a seguridade cando uses JaiRuta para navegación. Non uses a App mentres conduces. Para de forma segura antes de interactuar coa App, ou fai que un pasaxeiro a opere por ti.
+            </div>
+            
+            <p>Recoñeces que:</p>
+            <ul>
+                <li>As suxestións de rutas son só para orientación e poden non ser sempre óptimas</li>
+                <li>Es responsable de verificar a seguridade e legalidade das rutas</li>
+                <li>As condicións do tráfico, peches de estradas e outros factores poden afectar as rutas</li>
+                <li>Sempre debes seguir as leis e regulacións de tráfico locais</li>
+            </ul>
+        </section>
+
+        <div class="contact-info">
+            <h3>Información de Contacto</h3>
+            <p>Se tes algunha pregunta sobre estes Termos de Uso, por favor contacta connosco:</p>
+            <p><strong>Desenvolvedor:</strong> <a href="mailto:emelagudev@gmail.com">emelagudev@gmail.com</a></p>
+            <p>Responderemos ás túas consultas tan pronto como sexa posible.</p>
+        </div>
+
+        <div class="last-updated">
+            <p>Última Actualización: Xaneiro 2025</p>
+        </div>
+    </div>
+</body>
+</html>

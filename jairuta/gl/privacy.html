@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaiRuta - Política de Privacidade</title>
+    <meta name="description" content="Política de Privacidade de JaiRuta - Descobre como protexemos a túa privacidade e xestionamos os teus datos na nosa app de optimización de rutas.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        :root {
+            --primary-green: #34a853;
+            --secondary-green: #137333;
+            --light-green: #e8f5e8;
+            --dark-bg: #1a1a1a;
+            --dark-card: #2d2d2d;
+            --dark-text: #e0e0e0;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-green);
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--light-green);
+            color: var(--secondary-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a.current {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        h3 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+
+            .container {
+                background: var(--dark-card);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .highlight-box {
+                background: rgba(52, 168, 83, 0.2);
+                border-left-color: var(--primary-green);
+            }
+
+            .nav-links a {
+                background: rgba(52, 168, 83, 0.2);
+                color: var(--primary-green);
+            }
+
+            .last-updated {
+                border-top-color: #444;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JaiRuta</h1>
+            <p class="subtitle">Política de Privacidade</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="privacy.html" class="current">Política de Privacidade</a>
+            <a href="terms.html">Termos de Uso</a>
+        </nav>
+
+        <section>
+            <h2>Introdución</h2>
+            <p>Benvido a JaiRuta, unha aplicación de optimización de rutas desenvolvida por Emelagudev. Estamos comprometidos coa protección da túa privacidade e garantir transparencia sobre como xestionamos a túa información. Esta Política de Privacidade explica as nosas prácticas respecto á recollida, uso e protección de datos ao usar a nosa aplicación móbil.</p>
+            
+            <div class="highlight-box">
+                <strong>Punto Clave:</strong> JaiRuta está deseñada pensando na privacidade. Non recollemos información persoal identificable, e a nosa app funciona sen requirir rexistro de usuario ou inicio de sesión.
+            </div>
+        </section>
+
+        <section>
+            <h2>Información que Recollemos</h2>
+            
+            <h3>Información que NON Recollemos</h3>
+            <ul>
+                <li>Información de identificación persoal (nome, email, número de teléfono)</li>
+                <li>Contas de usuario ou perfís</li>
+                <li>Listas de contactos ou contactos persoais</li>
+                <li>Fotos, vídeos ou outros arquivos multimedia</li>
+            </ul>
+
+            <h3>Información que SI Recollemos</h3>
+            <ul>
+                <li><strong>Analíticas de Uso Anónimas:</strong> A través de Firebase Analytics, recollemos datos anónimos sobre como interactúas coa app (pantallas visitadas, funcións utilizadas, erros da app)</li>
+                <li><strong>Información do Dispositivo:</strong> Información básica do dispositivo como tipo de dispositivo, versión do sistema operativo e versión da app para optimización de compatibilidade e rendemento</li>
+                <li><strong>Datos de Optimización de Rutas:</strong> Podemos recoller coordenadas do usuario e/ou paradas para mellorar os algoritmos de optimización de rutas e proporcionar mellores suxestións de enrutamento</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Como Utilizamos a túa Información</h2>
+            <p>Os datos anónimos limitados que recollemos utilízanse exclusivamente para:</p>
+            <ul>
+                <li>Mellorar o rendemento da app e a experiencia de usuario</li>
+                <li>Identificar e corrixir erros ou problemas técnicos</li>
+                <li>Entender que funcións son máis valiosas para os usuarios</li>
+                <li>Tomar decisións informadas sobre o desenvolvemento futuro da app</li>
+            </ul>
+            
+            <p>Non utilizamos a túa información para marketing, segmentación publicitaria ou calquera propósito comercial máis alá da mellora da app.</p>
+        </section>
+
+        <section>
+            <h2>Servizos de Terceiros</h2>
+            
+            <h3>Firebase Analytics (Google)</h3>
+            <p>Utilizamos Google Firebase Analytics para recoller estatísticas de uso anónimas. Este servizo axúdanos a entender o rendemento da app e os patróns de comportamento dos usuarios sen identificar usuarios individuais.</p>
+            
+            <h3>Google AdMob</h3>
+            <p>JaiRuta mostra anuncios a través de Google AdMob para manter a app gratuíta para todos os usuarios. AdMob pode recoller certa información para propósitos de servizo de anuncios:</p>
+            <ul>
+                <li>ID de publicidade do dispositivo (que podes restablecer na configuración do teu dispositivo)</li>
+                <li>Información xeral de localización (só a nivel de país/rexión)</li>
+                <li>Patróns de uso da app para relevancia de anuncios</li>
+            </ul>
+            <p>Podes optar por non recibir publicidade personalizada a través da configuración de privacidade do teu dispositivo.</p>
+
+            <h3>Servizos de Mapas</h3>
+            <p>Os cálculos de rutas poden utilizar servizos de mapas e enrutamento de terceiros. Estes servizos procesan as solicitudes de rutas temporalmente e non almacenan a túa información específica de rutas.</p>
+        </section>
+
+        <section>
+            <h2>Seguridade de Datos</h2>
+            <p>Implementamos medidas de seguridade apropiadas para protexer os datos limitados que recollemos:</p>
+            <ul>
+                <li>Toda a transmisión de datos está cifrada utilizando protocolos estándar da industria</li>
+                <li>Os datos de analíticas anónimas almacénanse de forma segura nos servidores Firebase de Google</li>
+                <li>Non almacenamos información persoal sensible que poida identificarte</li>
+                <li>As avaliacións de seguridade regulares aseguran que as nosas prácticas se manteñan actualizadas</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Os teus Dereitos e Opcións</h2>
+            <ul>
+                <li><strong>Exclusión de Analíticas:</strong> Podes desactivar o seguimento de analíticas a través da configuración de privacidade do teu dispositivo</li>
+                <li><strong>Personalización de Anuncios:</strong> Podes optar por non recibir anuncios personalizados a través da configuración de publicidade do teu dispositivo</li>
+                <li><strong>Permisos da App:</strong> Podes revisar e modificar os permisos da app na configuración do teu dispositivo en calquera momento</li>
+                <li><strong>Eliminación de Datos:</strong> Como non recollemos datos persoais, non hai datos persoais para eliminar. As analíticas anónimas non poden rastrexarse ata usuarios individuais</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Privacidade de Menores</h2>
+            <p>JaiRuta é adecuada para usuarios de todas as idades. Non recollemos conscientemente información persoal de nenos menores de 13 anos. Como a nosa app non recolle información persoal identificable de ningún usuario, cumpre cos requisitos de protección de privacidade infantil.</p>
+        </section>
+
+        <section>
+            <h2>Usuarios Internacionais</h2>
+            <p>JaiRuta está dispoñible en todo o mundo. Os datos anónimos que recollemos poden procesarse en varios países onde operan os nosos provedores de servizos, incluíndo Estados Unidos. Aseguramos que todo o procesamento de datos cumpra coas leis e regulacións de privacidade aplicables.</p>
+        </section>
+
+        <section>
+            <h2>Cambios nesta Política de Privacidade</h2>
+            <p>Podemos actualizar esta Política de Privacidade de cando en vez para reflectir cambios nas nosas prácticas ou por razóns legais e regulatorias. Cando fagamos cambios significativos, notificaremos aos usuarios a través da app ou actualizaremos a data de "Última Actualización" a continuación. Animámoste a revisar esta política periodicamente.</p>
+        </section>
+
+        <div class="contact-info">
+            <h3>Contacta Connosco</h3>
+            <p>Se tes algunha pregunta, preocupación ou solicitude respecto a esta Política de Privacidade ou as nosas prácticas de privacidade, por favor contacta connosco:</p>
+            <p><strong>Desenvolvedor:</strong> <a href="mailto:emelagudev@gmail.com">emelagudev@gmail.com</a></p>
+            <p>Estamos comprometidos a abordar as túas preocupacións de privacidade de maneira rápida e transparente.</p>
+        </div>
+
+        <div class="last-updated">
+            <p>Última Actualización: Xaneiro 2025</p>
+        </div>
+    </div>
+</body>
+</html>

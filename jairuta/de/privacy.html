@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaiRoute - Datenschutzerklärung</title>
+    <meta name="description" content="JaiRoute Datenschutzerklärung - Erfahren Sie, wie wir Ihre Privatsphäre schützen und Ihre Daten in unserer Routenoptimierungs-App verwalten.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        :root {
+            --primary-green: #34a853;
+            --secondary-green: #137333;
+            --light-green: #e8f5e8;
+            --dark-bg: #1a1a1a;
+            --dark-card: #2d2d2d;
+            --dark-text: #e0e0e0;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-green);
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--light-green);
+            color: var(--secondary-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a.current {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        h3 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--medium-gray);
+            font-style: italic;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+
+            .container {
+                background: var(--dark-card);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .highlight-box {
+                background: rgba(52, 168, 83, 0.2);
+                border-left-color: var(--primary-green);
+            }
+
+            .nav-links a {
+                background: rgba(52, 168, 83, 0.2);
+                color: var(--primary-green);
+            }
+
+            .last-updated {
+                border-top-color: #444;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JaiRoute</h1>
+            <p class="subtitle">Datenschutzerklärung</p>
+        </header>
+
+        <nav class="nav-links">
+            <a href="privacy.html" class="current">Datenschutzerklärung</a>
+            <a href="terms.html">Nutzungsbedingungen</a>
+        </nav>
+
+        <section>
+            <h2>Einführung</h2>
+            <p>Willkommen bei JaiRoute, einer Routenoptimierungs-Anwendung, die von Emelagudev entwickelt wurde. Wir sind dem Schutz Ihrer Privatsphäre verpflichtet und gewährleisten Transparenz darüber, wie wir Ihre Informationen handhaben. Diese Datenschutzerklärung erklärt unsere Praktiken bezüglich der Datenerfassung, -nutzung und -schutz bei der Verwendung unserer mobilen Anwendung.</p>
+            
+            <div class="highlight-box">
+                <strong>Wichtiger Punkt:</strong> JaiRoute wurde mit Fokus auf Datenschutz entwickelt. Wir sammeln keine personenbezogenen Daten, und unsere App funktioniert ohne Benutzerregistrierung oder Anmeldung.
+            </div>
+        </section>
+
+        <section>
+            <h2>Informationen, die wir sammeln</h2>
+            
+            <h3>Informationen, die wir NICHT sammeln</h3>
+            <ul>
+                <li>Persönliche Identifikationsinformationen (Name, E-Mail, Telefonnummer)</li>
+                <li>Benutzerkonten oder Profile</li>
+                <li>Kontaktlisten oder persönliche Kontakte</li>
+                <li>Fotos, Videos oder andere Mediendateien</li>
+            </ul>
+
+            <h3>Informationen, die wir sammeln</h3>
+            <ul>
+                <li><strong>Anonyme Nutzungsanalysen:</strong> Über Firebase Analytics sammeln wir anonyme Daten darüber, wie Sie mit der App interagieren (besuchte Bildschirme, verwendete Funktionen, App-Abstürze)</li>
+                <li><strong>Geräteinformationen:</strong> Grundlegende Geräteinformationen wie Gerätetyp, Betriebssystemversion und App-Version für Kompatibilitäts- und Leistungsoptimierung</li>
+                <li><strong>Routenoptimierungsdaten:</strong> Wir können Benutzer- und/oder Stopp-Koordinaten sammeln, um Routenoptimierungsalgorithmen zu verbessern und bessere Routenvorschläge zu bieten</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wie wir Ihre Informationen verwenden</h2>
+            <p>Die begrenzten anonymen Daten, die wir sammeln, werden ausschließlich verwendet für:</p>
+            <ul>
+                <li>Verbesserung der App-Leistung und Benutzererfahrung</li>
+                <li>Identifizierung und Behebung von Fehlern oder technischen Problemen</li>
+                <li>Verstehen, welche Funktionen für Benutzer am wertvollsten sind</li>
+                <li>Fundierte Entscheidungen über die zukünftige App-Entwicklung treffen</li>
+            </ul>
+            
+            <p>Wir verwenden Ihre Informationen nicht für Marketing, Werbezielgruppenansprache oder andere kommerzielle Zwecke über die App-Verbesserung hinaus.</p>
+        </section>
+
+        <section>
+            <h2>Drittanbieter-Services</h2>
+            
+            <h3>Firebase Analytics (Google)</h3>
+            <p>Wir verwenden Google Firebase Analytics, um anonyme Nutzungsstatistiken zu sammeln. Dieser Service hilft uns, die App-Leistung und Benutzerverhaltensmuster zu verstehen, ohne einzelne Benutzer zu identifizieren.</p>
+            
+            <h3>Google AdMob</h3>
+            <p>JaiRoute zeigt Werbung über Google AdMob an, um die App für alle Benutzer kostenlos zu halten. AdMob kann bestimmte Informationen für Werbezwecke sammeln:</p>
+            <ul>
+                <li>Geräte-Werbe-ID (die Sie in Ihren Geräteeinstellungen zurücksetzen können)</li>
+                <li>Allgemeine Standortinformationen (nur auf Länder-/Regionsebene)</li>
+                <li>App-Nutzungsmuster für Werberelevanz</li>
+            </ul>
+            <p>Sie können personalisierte Werbung über die Datenschutzeinstellungen Ihres Geräts deaktivieren.</p>
+
+            <h3>Kartendienste</h3>
+            <p>Routenberechnungen können Drittanbieter-Karten- und Routingdienste nutzen. Diese Services verarbeiten Routenanfragen temporär und speichern Ihre spezifischen Routeninformationen nicht.</p>
+        </section>
+
+        <section>
+            <h2>Datensicherheit</h2>
+            <p>Wir implementieren angemessene Sicherheitsmaßnahmen zum Schutz der begrenzten Daten, die wir sammeln:</p>
+            <ul>
+                <li>Alle Datenübertragungen sind mit branchenüblichen Protokollen verschlüsselt</li>
+                <li>Anonyme Analysedaten werden sicher auf Googles Firebase-Servern gespeichert</li>
+                <li>Wir speichern keine sensiblen persönlichen Informationen, die Sie identifizieren könnten</li>
+                <li>Regelmäßige Sicherheitsbewertungen stellen sicher, dass unsere Praktiken aktuell bleiben</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Ihre Rechte und Wahlmöglichkeiten</h2>
+            <ul>
+                <li><strong>Analytics-Opt-out:</strong> Sie können die Analyse-Verfolgung über die Datenschutzeinstellungen Ihres Geräts deaktivieren</li>
+                <li><strong>Werbepersonalisierung:</strong> Sie können personalisierte Werbung über die Werbeeinstellungen Ihres Geräts deaktivieren</li>
+                <li><strong>App-Berechtigungen:</strong> Sie können App-Berechtigungen jederzeit in den Einstellungen Ihres Geräts überprüfen und ändern</li>
+                <li><strong>Datenlöschung:</strong> Da wir keine persönlichen Daten sammeln, gibt es keine persönlichen Daten zu löschen. Anonyme Analysen können nicht zu einzelnen Benutzern zurückverfolgt werden</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Kinderschutz</h2>
+            <p>JaiRoute ist für Benutzer aller Altersgruppen geeignet. Wir sammeln wissentlich keine persönlichen Informationen von Kindern unter 13 Jahren. Da unsere App keine personenbezogenen Daten von Benutzern sammelt, entspricht sie den Anforderungen zum Schutz der Privatsphäre von Kindern.</p>
+        </section>
+
+        <section>
+            <h2>Internationale Benutzer</h2>
+            <p>JaiRoute ist weltweit verfügbar. Die anonymen Daten, die wir sammeln, können in verschiedenen Ländern verarbeitet werden, in denen unsere Dienstanbieter tätig sind, einschließlich der Vereinigten Staaten. Wir stellen sicher, dass alle Datenverarbeitungen den geltenden Datenschutzgesetzen und -vorschriften entsprechen.</p>
+        </section>
+
+        <section>
+            <h2>Änderungen an dieser Datenschutzerklärung</h2>
+            <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen in unseren Praktiken oder aus rechtlichen und regulatorischen Gründen widerzuspiegeln. Bei wesentlichen Änderungen werden wir Benutzer über die App benachrichtigen oder das Datum "Zuletzt aktualisiert" unten aktualisieren. Wir empfehlen Ihnen, diese Richtlinie regelmäßig zu überprüfen.</p>
+        </section>
+
+        <div class="contact-info">
+            <h3>Kontaktieren Sie uns</h3>
+            <p>Wenn Sie Fragen, Bedenken oder Anfragen bezüglich dieser Datenschutzerklärung oder unserer Datenschutzpraktiken haben, kontaktieren Sie uns bitte:</p>
+            <p><strong>Entwickler:</strong> <a href="mailto:emelagudev@gmail.com">emelagudev@gmail.com</a></p>
+            <p>Wir sind verpflichtet, Ihre Datenschutzbedenken prompt und transparent zu behandeln.</p>
+        </div>
+
+        <div class="last-updated">
+            <p>Zuletzt aktualisiert: Januar 2025</p>
+        </div>
+    </div>
+</body>
+</html>
