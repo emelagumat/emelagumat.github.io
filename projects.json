@@ -31,6 +31,53 @@
     }
   },
   {
+  "name": "EasyQR",
+  "show": true,
+  "isFeatured": false,
+  "description": "iOS app for generating and scanning QR codes. Published on the App Store, it allows users to create, customize, scan, and share QR codes for URLs, contacts, calendar events, and more.",
+  "techStack": [
+    { "Frameworks": ["SwiftUI", "Lottie", "CoreImage", "AVFoundation"] },
+    { "Architecture": ["MVVM"] },
+    { "Platform APIs": ["Contacts", "EventKit", "Camera"] },
+    { "Services": ["Firebase Analytics", "Google AdMob"] }
+  ],
+  "features": [
+    {
+      "name": "QR Code Generation",
+      "description": "Create QR codes for URLs, text, contacts, calendar events, and more using CoreImage."
+    },
+    {
+      "name": "QR Code Scanning",
+      "description": "Scan any QR code with the camera to access content instantly."
+    },
+    {
+      "name": "Calendar Integration",
+      "description": "Import calendar events from the device or save events from a scanned QR code."
+    },
+    {
+      "name": "Contacts Integration",
+      "description": "Add new contacts from a scanned QR or generate a QR from an existing contact."
+    },
+    {
+      "name": "Customization",
+      "description": "Personalize QR codes with colors, logos, and Lottie animations."
+    },
+    {
+      "name": "Easy Sharing",
+      "description": "Share QR codes via messaging apps, social media, or save them to your device effortlessly."
+    },
+    {
+      "name": "Analytics & Ads",
+      "description": "Integrated with Firebase Analytics for usage insights and AdMob for monetization."
+    }
+  ],
+  "images": ["../../images/projects/easyqr/1.png", "../../images/projects/easyqr/2.png", "../../images/projects/easyqr/3.png"],
+  "link": {
+    "url": "https://apps.apple.com/us/app/easyqr-qr-generator/idYOUR_APP_ID",
+    "label": "Download on App Store"
+  }
+},
+  {
     "name": "PocketAccountant",
     "show": false,
     "isFeatured": false,
