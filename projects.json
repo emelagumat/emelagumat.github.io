@@ -110,5 +110,20 @@
       "url": "https://github.com/emelagumat/pocket-accountant",
       "label": "View on GitHub"
     }
+  },
+  {
+    "name": "Lost API",
+    "show": true,
+    "isFeatured": false,
+    "description": "LostAPI is a  practice-oriented API server developed using Vapor, themed around the Lost TV show.",
+    "techStack": [
+      { "Frameworks": ["Swift Vapor"] }
+    ],
+    "features": [],
+    "images": ["../../images/projects/apilost/1.jpg"],
+    "link": {
+      "url": "https://github.com/emelagumat/lostapi",
+      "label": "View on GitHub"
+    }
   }
 ]
