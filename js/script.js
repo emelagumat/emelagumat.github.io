@@ -131,7 +131,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let showcaseHTML = '';
         if (project.showcase) {
-            showcaseHTML = `<img src="${project.showcase}" alt="Showcase for ${project.name}" class="showcase-image">`;
+            showcaseHTML = `
+                            <video 
+                                src="${project.showcase}" 
+                                class="showcase-video" 
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline 
+                                controls>
+                                Your browser does not support the video tag.
+                            </video>`;
         }
 
         return `

@@ -53,7 +53,17 @@
                 featuredProjects.forEach(project => {
                     let carouselHTML = '';
                     if (project.showcase) {
-                        carouselHTML = `<img src="${project.showcase}" alt="Showcase of ${project.name}" class="showcase-image">`;
+                        carouselHTML = `
+                            <video 
+                                src="${project.showcase}" 
+                                class="showcase-video" 
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline 
+                                controls>
+                                Your browser does not support the video tag.
+                            </video>`;
                     } else {
                         const images = project.images ? project.images.slice(0, 3) : [];
                         if (images.length <= 3) {

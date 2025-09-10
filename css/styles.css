@@ -335,6 +335,13 @@ footer {
     padding: 10px;
 }
 
+.showcase-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* opcional: rellena sin deformar */
+  border-radius: 8px; /* igual que tu imagen si tenía bordes redondeados */
+}
 /* Responsive Carousel */
 @media (max-width: 768px) {
     .carousel {
