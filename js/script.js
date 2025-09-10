@@ -129,10 +129,16 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
 
+        let showcaseHTML = '';
+        if (project.showcase) {
+            showcaseHTML = `<img src="${project.showcase}" alt="Showcase for ${project.name}" class="showcase-image">`;
+        }
+
         return `
             <article class="card project">
                 <h2>${project.name}</h2>
                 <p>${project.description}</p>
+                ${showcaseHTML}
                 ${carouselHTML}
                 <div class="project-content" style="display: flex; gap: 20px; align-items: flex-start;">
                     <div>

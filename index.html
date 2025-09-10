@@ -51,20 +51,24 @@
                 const featuredProjects = data.filter(project => project.isFeatured);
                 const container = document.getElementById('featured-projects');
                 featuredProjects.forEach(project => {
-                    const images = project.images ? project.images.slice(0, 3) : [];
                     let carouselHTML = '';
-                    if (images.length <= 3) {
-                        carouselHTML = `<div class="carousel-flex">${images.map((img, index) => `<img src="${img}" alt="Screenshot ${index + 1} of ${project.name}" class="carousel-image">`).join('')}</div>`;
+                    if (project.showcase) {
+                        carouselHTML = `<img src="${project.showcase}" alt="Showcase of ${project.name}" class="showcase-image">`;
                     } else {
-                        carouselHTML = `
-                            <div class="carousel">
-                                <div class="carousel-images">
-                                    ${images.map((img, index) => `<img src="${img}" alt="Screenshot ${index + 1} of ${project.name}" class="carousel-image">`).join('')}
+                        const images = project.images ? project.images.slice(0, 3) : [];
+                        if (images.length <= 3) {
+                            carouselHTML = `<div class="carousel-flex">${images.map((img, index) => `<img src="${img}" alt="Screenshot ${index + 1} of ${project.name}" class="carousel-image">`).join('')}</div>`;
+                        } else {
+                            carouselHTML = `
+                                <div class="carousel">
+                                    <div class="carousel-images">
+                                        ${images.map((img, index) => `<img src="${img}" alt="Screenshot ${index + 1} of ${project.name}" class="carousel-image">`).join('')}
+                                    </div>
+                                    <button class="carousel-prev">‹</button>
+                                    <button class="carousel-next">›</button>
                                 </div>
-                                <button class="carousel-prev">‹</button>
-                                <button class="carousel-next">›</button>
-                            </div>
-                        `;
+                            `;
+                        }
                     }
                     const cardHTML = `
                         <div class="card project">
